@@ -1,14 +1,13 @@
 package com.example.dummyjson.controller;
 
 import com.example.dummyjson.dto.Product;
-import com.example.dummyjson.service.ProductService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
 
 
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,13 +21,13 @@ public class ProductControllerTest {
 
     @Test
     public void testGetAllProducts() {
-        List<Product> result = productController.getAllProducts();
-        assertEquals(30, result.size());
+       ResponseEntity<List<Product>> result = productController.getAllProducts();
+        assertEquals(30, result.getBody().size());
     }
 
     @Test
     public void testGetProductById() {
-        Product result = productController.getProductById(1L);
-        assertEquals(1L, result.getId());
+        ResponseEntity<Product> result = productController.getProductById(1L);
+        assertEquals(1L, result.getBody().getId());
     }
 }

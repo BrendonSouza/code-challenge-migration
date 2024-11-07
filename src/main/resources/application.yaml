@@ -1,2 +1,14 @@
 server:
   port: 8080
+
+spring:
+  profiles:
+    active:
+      - hml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

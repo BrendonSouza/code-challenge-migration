@@ -16,7 +16,7 @@ O desafio consiste em migrar este projeto para Java 17 e Spring Boot 3.2.5. Dura
 - **Validação de Dados**: Validação de dados de entrada usando Bean Validation (`javax.validation`).
 - **Gestão de Dependências**: Configurado para utilizar @Autoweird.
 - **Testes Unitários**: Inclui testes unitários desenvolvidos com JUnit 4 e Mockito.
-
+- **Endpoint Health**: Inclui um endpoint `actuator/health` que retorna a saúde do sistema.
 ## Estrutura do Projeto
 
 ```bash

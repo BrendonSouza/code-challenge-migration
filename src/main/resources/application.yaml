@@ -5,3 +5,10 @@ spring:
   profiles:
     active:
       - hml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
